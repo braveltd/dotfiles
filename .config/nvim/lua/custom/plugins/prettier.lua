@@ -1,6 +1,8 @@
 local status, prettier = pcall(require, 'prettier')
 if (not status) then return end
 
+print("test")
+
 prettier.setup {
   bin = 'prettierd',
   filetypes = {
@@ -11,6 +13,7 @@ prettier.setup {
     'typescriptreact',
     'json',
     'scss',
-    'less'
+    'less',
+    'python'
   }
 }

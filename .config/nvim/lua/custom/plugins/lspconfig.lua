@@ -4,18 +4,6 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local status, lspconfig = pcall(require, 'lspconfig')
 if (not status) then return end
 
--- local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
--- local enable_format_on_save = function(_, bufnr)
---   vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
---   vim.api.nvim_create_autocmd("BufWritePre", {
---     group = augroup_format,
---     buffer = bufnr,
---     callback = function()
---       vim.lsp.buf.format({ bufnr = bufnr })
---     end,
---   })
--- end
-
 lspconfig.tailwindcss.setup {}
 
 
@@ -49,6 +37,11 @@ lspconfig.eslint.setup {
       mode = "location"
     }
   }
+}
+
+lspconfig.solidity.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
 }
 
 lspconfig.tsserver.setup {
