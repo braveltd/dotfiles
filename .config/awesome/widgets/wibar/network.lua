@@ -3,7 +3,7 @@ local wibox = require("wibox")
 
 local networkWidget = wibox.widget({
 	{
-		image = "/home/hideuk/.config/awesome/images/wibar/network/signal-cellular-2.svg",
+		image = "/home/brave/.config/awesome/images/wibar/network/signal-cellular-2.svg",
 		resize = true,
 		widget = wibox.widget.imagebox,
 	},
@@ -16,7 +16,7 @@ local networkWidget = wibox.widget({
 
 --[[
 local networkWidget = wibox.widget{
-	image = "/home/hideuk/.config/awesome/images/wibar/network/signal-cellular-2.svg",
+	image = "/home/brave/.config/awesome/images/wibar/network/signal-cellular-2.svg",
 	widget = wibox.widget.imagebox,
 }
 --]]

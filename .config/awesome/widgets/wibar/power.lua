@@ -3,14 +3,14 @@ local gears = require("gears")
 local awful = require("awful")
 
 local powerButton = wibox.widget{
-	image = "/home/hideuk/.config/awesome/images/wibar/power/power-button.svg",
+	image = "/home/brave/.config/awesome/images/wibar/power/power-button.svg",
 	resize = true,
 	widget = wibox.widget.imagebox
 }
 
 powerButton:buttons(gears.table.join(
 	awful.button({}, 1, function()
-		awful.spawn.with_shell("/home/hideuk/.config/rofi/powermenu.sh 2 4 everforest JetBrains\\ Mono\\ Nerd\\ Font 12")
+		awful.spawn.with_shell("/home/brave/.config/rofi/powermenu.sh 2 4 everforest JetBrains\\ Mono\\ Nerd\\ Font 12")
 	end)
 ))
 

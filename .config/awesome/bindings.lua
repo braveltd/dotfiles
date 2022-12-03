@@ -33,6 +33,11 @@ globalkeys = gears.table.join(
     kbdcfg.switch_next()
   end, { description = "switch language", group = "keyboard" }),
 
+  -- Lock screen
+	awful.key({ modkey, "Control" }, "l", function()
+		awful.spawn.with_shell("xscreensaver-command -lock")
+	end, { description = "xscreensaver lock screen", group = "launcher" }),
+
 	-- Launch programs (launcher group)
 	awful.key({ modkey }, "e", function()
 		awful.spawn.with_shell("~/.config/rofi/picker.sh")

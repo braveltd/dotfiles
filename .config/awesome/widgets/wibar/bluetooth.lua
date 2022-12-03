@@ -3,7 +3,7 @@ local wibox = require("wibox")
 
 --[[
 local bluetoothWidget = wibox.widget{
-	image =  "/home/hideuk/.config/awesome/images/wibar/bluetooth/bluetooth-off.svg",
+	image =  "/home/brave/.config/awesome/images/wibar/bluetooth/bluetooth-off.svg",
 	resize = true,
 	widget = wibox.widget.imagebox
 }
@@ -15,7 +15,7 @@ local bluetoothWidget = wibox.widget({
 		widget = wibox.widget.textbox
 	},
 	{
-		image = "/home/hideuk/.config/awesome/images/wibar/bluetooth/bluetooth-off.svg",
+		image = "/home/brave/.config/awesome/images/wibar/bluetooth/bluetooth-off.svg",
 		resize = true,
 		widget = wibox.widget.imagebox
 	},

@@ -50,7 +50,7 @@ timer({
 
 -- give a nice background image to it
 _G.batteryWidgetContainer = wibox.container.background(batteryWidget)
-_G.batteryWidgetContainer.bgimage = "/home/hideuk/.config/awesome/images/wibar/background/bg_blue.png"
+_G.batteryWidgetContainer.bgimage = "/home/brave/.config/awesome/images/wibar/background/bg_blue.png"
 _G.batteryWidgetContainer.fg = "white"
 
 return _G.batteryWidgetContainer

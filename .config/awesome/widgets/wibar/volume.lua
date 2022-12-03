@@ -3,13 +3,13 @@ local M = {}
 
 local function getWibarimage(curVolume, isMute)
 	if isMute then
-		return "/home/hideuk/.config/awesome/images/wibar/volume/volume-mute.svg"
+		return "/home/brave/.config/awesome/images/wibar/volume/volume-mute.svg"
 	elseif curVolume > 70 then
-		return "/home/hideuk/.config/awesome/images/wibar/volume/volume-high.svg"
+		return "/home/brave/.config/awesome/images/wibar/volume/volume-high.svg"
 	elseif curVolume > 30 then
-		return "/home/hideuk/.config/awesome/images/wibar/volume/volume-medium.svg"
+		return "/home/brave/.config/awesome/images/wibar/volume/volume-medium.svg"
 	else
-		return "/home/hideuk/.config/awesome/images/wibar/volume/volume-low.svg"
+		return "/home/brave/.config/awesome/images/wibar/volume/volume-low.svg"
 	end
 end
 
