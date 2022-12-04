@@ -40,16 +40,16 @@ globalkeys = gears.table.join(
 
 	-- Launch programs (launcher group)
 	awful.key({ modkey }, "e", function()
-		awful.spawn.with_shell("~/.config/rofi/picker.sh")
-	end, { description = "open rofi picker", group = "launcher" }),
+		awful.spawn.with_shell("rofi -modi emoji -show emoji")
+	end, { description = "open rofi emoji picker", group = "launcher" }),
 
 	awful.key({ modkey }, "r", function()
-		awful.spawn.with_shell("~/.config/rofi/launcher.sh")
-	end, { description = "run rofi application menu", group = "launcher" }),
+		awful.spawn.with_shell("rofi -show drun")
+	end, { description = "open rofi launcher", group = "launcher" }),
 
-	awful.key({ modkey, "Control" }, "w", function()
-		awful.spawn.with_shell("~/.config/rofi/powermenu.sh 2 2 yousai JetBrains\\ Mono\\ Nerd\\ Font 12")
-	end, { description = "run rofi power menu", group = "launcher" }),
+	-- awful.key({ modkey, "Control" }, "w", function()
+	-- 	awful.spawn.with_shell("~/.config/rofi/powermenu.sh 2 2 yousai JetBrains\\ Mono\\ Nerd\\ Font 12")
+	-- end, { description = "run rofi power menu", group = "launcher" }),
 
 	awful.key({ modkey }, "Return", function()
 		awful.spawn(terminal)

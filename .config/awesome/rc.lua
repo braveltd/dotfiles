@@ -1,13 +1,7 @@
--- If LuaRocks is installed, make sure that packages installed through it are
--- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
--- Standard awesome library
--- local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
--- Widget and layout library
--- local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -72,11 +66,6 @@ terminal = "kitty"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
--- Default modkey.
--- Usually, Mod4 is the key with a logo between Control and Alt.
--- If you do not like this or do not have such a key,
--- I suggest you to remap Mod4 to another key using xmodmap or other tools.
--- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
@@ -92,14 +81,8 @@ awful.layout.layouts = {
 	awful.layout.suit.max,
 	-- awful.layout.suit.max.fullscreen,
 	awful.layout.suit.magnifier,
-	-- awful.layout.suit.corner.nw,
-	-- awful.layout.suit.corner.ne,
-	-- awful.layout.suit.corner.sw,
-	-- awful.layout.suit.corner.se,
 }
--- }}}
-
--- {{{ Menu
+--
 -- Create a launcher widget and a main menu
 myawesomemenu = {
 	{
@@ -221,27 +204,6 @@ awful.rules.rules = {
 	-- { rule = { class = "Firefox" },
 	--   properties = { screen = 1, tag = "2" } },
 }
--- }}}
-
--- {{{ Signals
--- Signal function to execute when a new client appears.
--- client.connect_signal("arrange", function (s)
---     local max = s.selected_tag.layout.name == "max"
---     local only_one = #s.tiled_clients == 1 -- use tiled_clients so that other floating windows don't affect the count
---     -- but iterate over clients instead of tiled_clients as tiled_clients doesn't include maximized windows
---     for _, c in pairs(s.clients) do
---         if (max or only_one) and not c.floating or c.maximized then
---             c.border_width = 0
---         else
---             c.border_width = beautiful.border_width
---         end
---     end
--- end)
---
--- client.connect_signal("property::fullscreen", function (c)
---     c.border_width = c.fullscreen and 0 or beautiful.border_width
--- end)
---
 client.connect_signal("manage", function(c)
 	-- Set the windows at the slave,
 	-- i.e. put it at the end of others instead of setting it master.
