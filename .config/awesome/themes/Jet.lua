@@ -37,20 +37,6 @@ theme.fg_focus      = "#f5e0dc" --lightwhite
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
--- There are other variable sets
--- overriding the default one when
--- defined, the sets are:
--- taglist_[bg|fg]_[focus|urgent|occupied|empty|volatile]
--- tasklist_[bg|fg]_[focus|urgent]
--- titlebar_[bg|fg]_[normal|focus]
--- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
--- mouse_finder_[color|timeout|animate_timeout|radius|factor]
--- prompt_[fg|bg|fg_cursor|bg_cursor|font]
--- hotkeys_[bg|fg|border_width|border_color|shape|opacity|modifiers_fg|label_bg|label_fg|group_margin|font|description_font]
--- Example:
---theme.taglist_bg_focus = "#ff0000"
-
--- {{{ Hotkeys help menu:
 theme.hotkeys_bg = theme.black
 theme.hotkeys_fg = "white"
 theme.hotkeys_description_font = "MesloLGMDZ Nerd Font Mono"
@@ -60,22 +46,13 @@ theme.hotkeys_modifiers_fg = "#d5c4a1" -- white
 theme.hotkeys_label_bg = theme.black
 theme.hotkeys_label_fg = "white"
 theme.hotkeys_group_margin = 30
--- }}}
-
--- {{{ Calendar
--- beautiful.calendar_[flag]_[property]=val
--- flag: year, month, yearheader, header, weekday, weeknumber, normal, focus
--- property: markup, fg_color, bg_color, shape, padding, border_width, border_color, opacity
 
 theme.calendar_month_border_width = 5
 theme.calendar_month_border_color = theme.black
 theme.calendar_focus_bg_color = "#fab387"
 theme.calendar_focus_fg_color =  theme.black
 theme.calendar_month_opacity = 0.92
--- theme.calendar_header_padding = 5
--- }}}
 
--- taglist:
 theme.taglist_fg_empty = "#a6e3a1"
 theme.taglist_fg_occupied = "#eba0ac"
 theme.taglist_fg_focus = "#f9e2af"

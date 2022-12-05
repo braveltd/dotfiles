@@ -28,6 +28,10 @@ globalkeys = gears.table.join(
   awful.key({"Shift"}, "Alt_L", function ()
     kbdcfg.switch_next()
   end, { description = "switch language", group = "keyboard" }),
+
+  awful.key({"Control"}, "space", function ()
+    kbdcfg.switch_next()
+  end, { description = "switch language", group = "keyboard" }),
 	-- Alt-Shift to change keyboard layout
 	awful.key({"Mod1"}, "Shift_L", function ()
     kbdcfg.switch_next()

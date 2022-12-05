@@ -19,7 +19,7 @@ awful.spawn.with_shell("flameshot")
 -- wallpepers
 awful.spawn.with_shell("nitrogen --restore")
 -- picom composite manager
-awful.spawn.with_shell("picom --experimental-backends -b")
+awful.spawn.with_shell("picom -b")
 -- pulseeffects for better sound 
 -- awful.spawn.with_shell("pulseeffects")
 -- move pulseeffects at 4th workspace
