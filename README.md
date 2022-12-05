@@ -1,5 +1,9 @@
-![awesomewm screenshot](./images/awesome_preview.jpg)
-![nvim screenshot](./images/nvim_preview.jpg)
+![screenshot](./images/image0.png)
+![screenshot](./images/image1.png)
+![screenshot](./images/image2.png)
+![screenshot](./images/image3.png)
+![screenshot](./images/image4.png)
+![screenshot](./images/image5.png)
 
 # Brave's dotfiles
 
