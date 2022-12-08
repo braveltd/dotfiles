@@ -3,16 +3,6 @@ vim.opt.relativenumber = true
 -- auto sudo
 vim.g.suda_smart_edit = 1
 
--- -- closetag plugin stuff
--- vim.g.closetag_filenames = '*.html,*.xhtml,*.phtml,*.jsx,*.js,*.tsx'
--- vim.g.closetag_xhtml_filenames = '*.xhtml,*.jsx'
--- vim.g.closetag_filetypes = 'html,xhtml,phtml'
--- vim.g.closetag_xhtml_filetypes = 'xhtml,jsx'
--- vim.g.closetag_emptyTags_caseSensitive = 1
--- vim.g.closetag_shortcut = '>'
--- vim.g.closetag_close_shortcut = '<leader>>'-- opt.noswapfile = true
-
-
 -- load it after nvim-lspconfig , since we'll use some lspconfig stuff in the null-ls config!
 vim.g.loaded_python3_provider = nil
 vim.g.loaded_node_provider = nil

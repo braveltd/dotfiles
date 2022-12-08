@@ -13,13 +13,13 @@ plugins=(
   sudo
   yarn
   web-search
-  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
 source $(dirname $(gem which colorls))/tab_complete.sh
 source /home/brave/zsh-z/zsh-z.plugin.zsh
 source /home/brave/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
@@ -39,12 +39,10 @@ function reload_gtk_theme() {
   gsettings set org.gnome.desktop.interface gtk-theme $theme
 }
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-export BOT_TOKEN="Custom token"
+source ~/.zshenv
 
 unsetopt BEEP
 alias neofetch="neofetch --source /home/hideuk/.config/neofetch/my_ascii"
@@ -53,12 +51,22 @@ alias neovim="nvim"
 alias vim="nvim"
 alias vi="nvim"
 
+# for python virtual env
+alias vact=". ./.env/bin/activate"
+alias vdact="deactivate"
+
 export VIMRUNTIME="/usr/share/nvim/runtime"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
-# eval "$(rbenv init -)"
+# pnpm
+export PNPM_HOME="/home/brave/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
 
+alias pn="pnpm"
+
+echo "\n\t\t\t\t\t   Brave Studio - Development, done right!\n"
 neofetch
