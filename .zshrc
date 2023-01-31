@@ -13,12 +13,13 @@ plugins=(
   sudo
   yarn
   web-search
+  poetry
 )
 
 source $ZSH/oh-my-zsh.sh
 source $(dirname $(gem which colorls))/tab_complete.sh
-source /home/brave/zsh-z/zsh-z.plugin.zsh
-source /home/brave/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/zsh-z/zsh-z.plugin.zsh
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export FZF_DEFAULT_OPTS=" \
@@ -55,14 +56,13 @@ alias vi="nvim"
 alias vact=". ./.env/bin/activate"
 alias vdact="deactivate"
 
-export VIMRUNTIME="/usr/share/nvim/runtime"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/home/brave/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
