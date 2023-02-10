@@ -46,27 +46,21 @@ export VISUAL='nvim'
 source ~/.zshenv
 
 unsetopt BEEP
-alias neofetch="neofetch --source /home/hideuk/.config/neofetch/my_ascii"
 alias ls="colorls"
 alias neovim="nvim"
 alias vim="nvim"
 alias vi="nvim"
-
-# for python virtual env
-alias vact=". ./.env/bin/activate"
-alias vdact="deactivate"
-
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+#
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PNPM_HOME:$HOME/.local/bin:$HOME/.poetry/bin:$PATH"
 # pnpm end
 
 alias pn="pnpm"
 
-echo "\n\t\t\t\t\t   Brave Studio - Development, done right!\n"
+echo -e "\n\u1b[38;5;202;1mBrave Studio\u1b[m - Development, done right!\n"
+
 neofetch
