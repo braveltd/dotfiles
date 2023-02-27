@@ -7,18 +7,18 @@ stty icrnl
 
 plugins=(
   git
+  python
   last-working-dir
   extract
   history
   sudo
-  yarn
   web-search
   poetry
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
 source $(dirname $(gem which colorls))/tab_complete.sh
-source $HOME/zsh-z/zsh-z.plugin.zsh
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
