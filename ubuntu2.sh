@@ -7,6 +7,9 @@ touch ~/.zshenv
 
 cp .oh-my-zsh/themes/brave.zsh-theme ~/.oh-my-zsh/themes/
 
+# download rbenv from github, activation already in .zshrc
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
