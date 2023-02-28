@@ -18,7 +18,6 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $(dirname $(gem which colorls))/tab_complete.sh
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -64,5 +63,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(~/.rbenv/bin/rbenv init - zsh)"
+source $(dirname $(gem which colorls))/tab_complete.sh
 
 neofetch
