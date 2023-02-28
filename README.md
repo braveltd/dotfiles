@@ -55,8 +55,6 @@ copy .config -> your local ~/.config, fix bugs)
 
 - [Telegram @bravecode](https://t.me/bravecode)
 
-
-
 cp .zshrc ~
 touch .zshenv
 
@@ -72,4 +70,3 @@ cp -r .config/nvim/lua/custom/ ~/.config/nvim/lua/
 
 gcl https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
-
