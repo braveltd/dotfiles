@@ -7,6 +7,10 @@
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install git wget curl
+# install some shit
+sudo apt install git wget curl tmux 
+
+wget https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.deb
+sudo apt install ./nvim-linux64.deb
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
