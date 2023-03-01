@@ -1,3 +1,2 @@
-require "custom.base"
-require "custom.highlights"
-
+require("custom.base")
+require("custom.highlights")
