@@ -12,6 +12,5 @@ prettier.setup {
     'json',
     'scss',
     'less',
-    'python'
   }
 }
