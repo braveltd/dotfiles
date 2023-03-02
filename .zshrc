@@ -7,14 +7,14 @@ stty icrnl
 
 plugins=(
   git
+  z
+  sudo
   python
+  poetry
   last-working-dir
   extract
   history
-  sudo
   web-search
-  poetry
-  z
 )
 
 source $ZSH/oh-my-zsh.sh
