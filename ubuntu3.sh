@@ -1,9 +1,11 @@
 # shit
-#
-#
-#
 # python shit
-#
+
+# Assume you runned ubuntu2.sh
+
+rbenv install 3.2.1
+rbenv global 3.2.1
+gem install colorls
 
 # donwloading python3.11 (Full)
 sudo add-apt-repository ppa:deadsnakes/ppa

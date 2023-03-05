@@ -54,19 +54,3 @@ copy .config -> your local ~/.config, fix bugs)
 ## About me
 
 - [Telegram @bravecode](https://t.me/bravecode)
-
-cp .zshrc ~
-touch .zshenv
-
-gcl https://github.com/agkozak/zsh-z.git
-gcl https://github.com/zsh-users/zsh-syntax-highlighting.git
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-
-gem install colorls
-
-cp .oh-my-zsh/themes/brave.zsh-theme ~/.oh-my-zsh/themes/
-
-cp -r .config/nvim/lua/custom/ ~/.config/nvim/lua/
-
-gcl https://github.com/gpakosz/.tmux.git
-ln -s -f .tmux/.tmux.conf

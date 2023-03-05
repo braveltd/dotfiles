@@ -8,7 +8,10 @@ sudo apt update
 sudo apt upgrade -y
 
 # install some shit
-sudo apt install git wget curl tmux 
+sudo apt install git wget curl tmux neofetch gcc build-essential 
+
+# for rbenv
+sudo apt install libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
 
 wget https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.deb
 sudo apt install ./nvim-linux64.deb
