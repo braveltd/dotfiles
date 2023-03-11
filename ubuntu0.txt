@@ -1,3 +1,5 @@
+# THIS DOTFILES MOSTLY FOR UBUNTU 22.04
+
 adduser brave
 usermod -aG sudo brave
 
