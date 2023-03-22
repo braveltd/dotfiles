@@ -1,12 +1,24 @@
+---@type ChadrcConfig
 local M = {}
 
-M.plugins = require("custom.plugins")
-
-M.mappings = require("custom.mappings")
-
 M.ui = {
-	theme_toggle = { "catppuccin", "catppuccin_latte" },
-	theme = "catppuccin",
+  theme = "catppuccin",
+  theme_toggle = { "catppuccin", "everforest_light" },
+
+  telescope = {
+    style = "bordered", -- borderless / bordered
+  },
+
+  statusline = {
+    theme = "minimal",
+    separator_style = "round"
+  },
+
+  nvdash = {
+    load_on_startup = true,
+  }
 }
+
+M.plugins = "custom.plugins"
 
 return M

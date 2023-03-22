@@ -1,2 +1,4 @@
-require("custom.base")
-require("custom.highlights")
+vim.opt.relativenumber = true -- relative numbers
+
+vim.opt.wrap = false -- No wrap line (good for long svg)
+
