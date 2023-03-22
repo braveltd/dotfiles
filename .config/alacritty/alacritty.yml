@@ -1,0 +1,67 @@
+window:
+  opacity: 0.8
+
+scrolling:
+  history: 50000
+
+font:
+  normal:
+    family: MesloLGSDZ Nerd Font
+
+    style: Regular
+
+  bold:
+    family: MesloLGSDZ Nerd Font
+
+    style: Bold
+
+  italic:
+    family: MesloLGSDZ Nerd Font
+
+    style: Italic
+
+  bold_italic:
+    family: MesloLGLDZ Nerd Font
+
+    style: Bold Italic
+
+  size: 11.0
+
+colors:
+  primary:
+    background: "#222222"
+    foreground: "#F9F9F9"
+
+  normal:
+    black: "#3f3f3f"
+    red: "#cc0000"
+    green: "#4e9a06"
+    yellow: "#c4a000"
+    blue: "#94bff3"
+    magenta: "#85678f"
+    cyan: "#06989a"
+    white: "#dcdccc"
+
+  # Bright colors
+  bright:
+    black: "#545454"
+    red: "#fc5454"
+    green: "#8ae234"
+    yellow: "#fce94f"
+    blue: "#94bff3"
+    magenta: "#b294bb"
+    cyan: "#93e0e3"
+    white: "#ffffff"
+
+  #dim:
+  #  black:   '#131415'
+  #  red:     '#864343'
+  #  green:   '#777c44'
+  #  yellow:  '#9e824c'
+  #  blue:    '#556a7d'
+  #  magenta: '#75617b'
+  #  cyan:    '#5b7d78'
+  #  white:   '#828482'
+
+key_bindings:
+  - { key: F11, action: ToggleFullscreen }
