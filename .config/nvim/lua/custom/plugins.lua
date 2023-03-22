@@ -1,8 +1,16 @@
----@type NvPluginSpec[]
+local overrides = require "custom.configs.overrides"
+
 local plugins = {
   {
+    "williamboman/mason.nvim",
+    opts = overrides.mason,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = overrides.treesitter,
+  },
+  {
     "neovim/nvim-lspconfig",
-
     dependencies = {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
@@ -15,22 +23,18 @@ local plugins = {
     end,
   },
   {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "python",
-        "html",
-        "css",
-        "scss",
-        "javascript",
-        "typescript",
-        "tsx",
-        "lua",
-        "json",
-        "css",
-        "func"
-      },
+    "glepnir/lspsaga.nvim",
+    event = "BufRead",
+    dependencies = {
+      { "nvim-tree/nvim-web-devicons" },
+      --Please make sure you install markdown and markdown_inline parser
+      { "nvim-treesitter/nvim-treesitter" },
     },
+    config = function()
+      require("lspsaga").setup {
+        server_filetype_map = {},
+      }
+    end,
   },
 }
 
