@@ -28,3 +28,9 @@ lspconfig.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
+
+lspconfig.emmet_ls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "eruby" },
+}

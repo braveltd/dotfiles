@@ -2,6 +2,12 @@ local overrides = require "custom.configs.overrides"
 
 local plugins = {
   {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup {}
+    end,
+  },
+  {
     "williamboman/mason.nvim",
     opts = overrides.mason,
   },

@@ -10,8 +10,8 @@ M.ui = {
   },
 
   statusline = {
-    theme = "minimal",
-    separator_style = "round",
+    theme = "default",
+    separator_style = "block",
   },
 
   nvdash = {
