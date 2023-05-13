@@ -8,7 +8,6 @@ local sources = {
   formatting.stylua,
   formatting.black,
   diagnostics.eslint_d,
-  diagnostics.pylint,
   diagnostics.fish,
   diagnostics.jsonlint,
 }

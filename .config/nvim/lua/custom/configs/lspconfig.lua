@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "jsonls" }
+local servers = { "html", "cssls", "jsonls", "diagnosticls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -32,5 +32,12 @@ lspconfig.pyright.setup {
 lspconfig.emmet_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "eruby" },
+  init_options = {
+    html = {
+      options = {
+        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+        ["bem.enabled"] = true,
+      },
+    },
+  },
 }
