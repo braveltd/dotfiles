@@ -7,4 +7,3 @@ vim.filetype.add {
     [".func"] = "func",
   },
 }
-vim.treesitter.language.register("func", "func")
