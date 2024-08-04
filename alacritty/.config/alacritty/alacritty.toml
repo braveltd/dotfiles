@@ -1,0 +1,31 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14.1
+
+[font.bold]
+family = "FiraCode NFM"
+style = "Bold"
+
+[font.bold_italic]
+family = "FiraCode NFM"
+style = "Bold Italic"
+
+[font.italic]
+family = "FiraCode NFM"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode NFM"
+style = "Regular"
+
+[window]
+dynamic_padding = false
+opacity = 0.8
+startup_mode = "Fullscreen"
+title = "Alacritty <3"
+
+[window.padding]
+x = 0
+y = 0

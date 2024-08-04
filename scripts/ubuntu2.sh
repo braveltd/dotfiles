@@ -20,6 +20,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 cp -r ./.config/nvim/lua/custom/ ~/.config/nvim/lua/
 
+# be careful
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
 cp ./.tmux.conf.local ~/.tmux.conf.local

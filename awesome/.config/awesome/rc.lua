@@ -69,6 +69,7 @@ kbdcfg.bind()
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
 	awful.layout.suit.tile,
+	awful.layout.suit.floating,
 }
 -- }}}
 
@@ -178,7 +179,7 @@ awful.screen.connect_for_each_screen(function(s)
 	set_wallpaper(s)
 
 	-- Each screen has its own tag table.
-	awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+	awful.tag({ "1", "2", "3", "4", "5", "6", "7" }, s, awful.layout.layouts[1])
 
 	-- Create a promptbox for each screen
 	s.mypromptbox = awful.widget.prompt()
@@ -335,10 +336,6 @@ globalkeys = gears.table.join(
 		menubar.show()
 	end, { description = "show the menubar", group = "launcher" }),
 	-- Custom starts there
-	-- ScreenShot
-	awful.key({}, "Print", function()
-		awful.spawn.with_shell("flameshot gui")
-	end, { description = "make screenshot", group = "launcher" }),
 	-- Keyboard
 	awful.key({ "Shift" }, "Alt_L", function()
 		kbdcfg.switch_next()
@@ -360,12 +357,12 @@ globalkeys = gears.table.join(
 	end, { description = "start rofi windows", group = "launcher" }),
 	awful.key({ modkey, "Shift" }, "e", function()
 		awful.spawn.with_shell("rofi -show emoji -modi emoji")
-	end, { description = "lock screen", group = "launcher" }),
+	end, { description = "start rofi emoji", group = "launcher" }),
 	awful.key({ "Control", "Shift" }, "b", function()
 		awful.spawn.with_shell(browser)
 	end, { description = "start browser", group = "launcher" }),
-	awful.key({ modkey, "control" }, "l", function()
-		awful.spawn.with_shell("xscreensaver-command -lock")
+	awful.key({ "Control", modkey }, "l", function()
+		awful.spawn.with_shell("betterlockscreen -l blur")
 	end, { description = "lock screen", group = "launcher" })
 )
 
