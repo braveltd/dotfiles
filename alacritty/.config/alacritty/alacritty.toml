@@ -22,7 +22,7 @@ style = "Regular"
 
 [window]
 dynamic_padding = false
-opacity = 0.8
+opacity = 0.89
 startup_mode = "Fullscreen"
 title = "Alacritty <3"
 
