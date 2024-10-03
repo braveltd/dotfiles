@@ -9,7 +9,7 @@ sudo apt install git zsh
 mkdir dev
 
 
-ssh-keygen -t ed25519 -C "belicoff@gmail.com"
+ssh-keygen -t ed25519 -C "github@bravestd.com"
 eval "$(ssh-agent -s)"
 cat ~/.ssh/id_ed25519.pub
 
