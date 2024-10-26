@@ -30,8 +30,11 @@ alias pn="pnpm"
 alias cat="bat"
 
 zoxide init fish | source
-oh-my-posh init fish --config $HOME/.config/ohmyposh/base.toml | source
+#--config $HOME/.config/ohmyposh/base.toml | source
+oh-my-posh init fish | source
 thefuck --alias | source 
+
+poetry completions fish > ~/.config/fish/completions/poetry.fish
 
 alias cd="z"
 
@@ -41,3 +44,4 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
