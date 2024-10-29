@@ -18,6 +18,7 @@ end
 
 alias pamcan="pacman"
 
+alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 alias vimdiff="nvim -d"
