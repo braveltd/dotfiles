@@ -16,6 +16,15 @@ if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
     cat ~/.cache/ags/user/generated/terminal/sequences.txt
 end
 
+# pnpm
+set -gx PNPM_HOME "/home/brave/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+set -gx PATH "/home/brave/.local/bin" $PATH
+
 alias pamcan="pacman"
 
 alias v="nvim"
@@ -38,10 +47,4 @@ poetry completions fish > ~/.config/fish/completions/poetry.fish
 
 alias cd="z"
 
-# pnpm
-set -gx PNPM_HOME "/home/brave/.local/share/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
 
