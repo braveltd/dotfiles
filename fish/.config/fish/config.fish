@@ -35,6 +35,8 @@ alias vimdiff="nvim -d"
 alias ls="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias l="eza --color=always --long --git --no-user --all"
 
+alias ta="tmux attach || tmux"
+
 alias pn="pnpm"
 
 alias cat="bat"
