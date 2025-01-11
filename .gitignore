@@ -62,6 +62,7 @@ Pods/
 # Fish local config
 .config/fish/config-local.fish
 .config/fish/fish_variables.x86_64
+.config/fish/fish_variables
 
 # Zsh local config
 .zshrc.local
