@@ -23,6 +23,15 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
+# Adding wsl-open as a browser for Fish for Windows
+if string match -qr '(m|M)icrosoft' (uname -r)
+    if test -z "$BROWSER"
+        set -x BROWSER wsl-open
+    else
+        set -x BROWSER "$BROWSER:wsl-open"
+    end
+end
+
 set -gx PATH "/home/brave/.local/bin" $PATH
 
 alias pamcan="pacman"
@@ -45,8 +54,10 @@ zoxide init fish | source
 oh-my-posh init fish --config $HOME/.config/ohmyposh/zen.toml | source
 thefuck --alias | source 
 
-poetry completions fish > ~/.config/fish/completions/poetry.fish
+#poetry completions fish > ~/.config/fish/completions/poetry.fish
 
-alias cd="z"
+#alias cd="z"
 
-
+if test -f ~/.env.fish
+  source ~/.env.fish
+end
