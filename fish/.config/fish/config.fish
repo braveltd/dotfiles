@@ -48,6 +48,9 @@ alias ta="tmux attach"
 alias tr="tmux attach || tmux"
 
 alias pn="pnpm"
+alias pnd="pnpm dev"
+alias pnb="pnpm build"
+alias pnst="pnpm start"
 
 alias cat="bat"
 
@@ -57,7 +60,7 @@ thefuck --alias | source
 
 #poetry completions fish > ~/.config/fish/completions/poetry.fish
 
-#alias cd="z"
+alias cd="z"
 
 if test -f ~/.env.fish
   source ~/.env.fish
