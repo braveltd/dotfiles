@@ -43,10 +43,9 @@ alias vimdiff="nvim -d"
 
 alias ls="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias l="eza --color=always --long --git --no-user --all"
-
 alias ta="tmux attach || tmux"
-
 alias pn="pnpm"
+alias lg="lazygit"
 
 alias cat="bat"
 
@@ -63,3 +62,5 @@ bind N "commandline -i nvim"
 if test -f ~/.env.fish
   source ~/.env.fish
 end
+
+alias q="exit"
