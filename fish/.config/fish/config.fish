@@ -43,9 +43,16 @@ alias vimdiff="nvim -d"
 
 alias ls="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias l="eza --color=always --long --git --no-user --all"
-alias ta="tmux attach || tmux"
-alias pn="pnpm"
+
 alias lg="lazygit"
+
+alias ta="tmux attach"
+alias tr="tmux attach || tmux"
+
+alias pn="pnpm"
+alias pnd="pnpm dev"
+alias pnb="pnpm build"
+alias pnst="pnpm start"
 
 alias cat="bat"
 
@@ -56,8 +63,6 @@ thefuck --alias | source
 poetry completions fish > ~/.config/fish/completions/poetry.fish
 
 alias cd="z"
-
-bind N "commandline -i nvim"
 
 if test -f ~/.env.fish
   source ~/.env.fish
