@@ -1,19 +1,16 @@
-function fish_prompt -d "Write out the prompt"
-    # This shows up as USER@HOST /home/user/ >, with the directory colored
-    # $USER and $hostname are set by fish, so you can just use them
-    # instead of using `whoami` and `hostname`
-    printf '%s@%s %s%s%s > ' $USER $hostname \
-        (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
+function greeting -d "Greet user"
+  echo "Hello, $USER"
+
+  echo -s (set_color blue) "╔══════════════════════════════╗"
+  echo -s (set_color blue) "║      Welcome, <3 Brave.      ║"
+  echo -s (set_color blue) "╚══════════════════════════════╝"
+  echo -s (set_color cyan) "Today is "(date "+%A, %B %d %Y")" and it's "(date "+%H:%M")
+  echo -s (set_color yellow) "Are we making money or having fun today?"
 end
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    set fish_greeting
-
-end
-
-if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
-    cat ~/.cache/ags/user/generated/terminal/sequences.txt
+  greeting
+  set fish_greeting
 end
 
 # pnpm
@@ -25,11 +22,11 @@ end
 
 # Adding wsl-open as a browser for Fish for Windows
 if string match -qr '(m|M)icrosoft' (uname -r)
-    if test -z "$BROWSER"
-        set -x BROWSER wsl-open
-    else
-        set -x BROWSER "$BROWSER:wsl-open"
-    end
+  if test -z "$BROWSER"
+    set -x BROWSER wsl-open
+  else
+    set -x BROWSER "$BROWSER:wsl-open"
+  end
 end
 
 set -gx PATH "/home/brave/.local/bin" $PATH
@@ -63,9 +60,10 @@ thefuck --alias | source
 poetry completions fish > ~/.config/fish/completions/poetry.fish
 
 alias cd="z"
+alias q="exit"
 
-if test -f ~/.env.fish
-  source ~/.env.fish
+if test -f $HOME/.env.fish
+  source $HOME/.env.fish
 end
 
-alias q="exit"
+
