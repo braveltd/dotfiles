@@ -57,7 +57,7 @@ zoxide init fish | source
 oh-my-posh init fish --config $HOME/.config/ohmyposh/zen.toml | source
 thefuck --alias | source 
 
-poetry completions fish > ~/.config/fish/completions/poetry.fish
+# poetry completions fish > ~/.config/fish/completions/poetry.fish
 
 alias cd="z"
 alias q="exit"
