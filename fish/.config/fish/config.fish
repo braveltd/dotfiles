@@ -1,11 +1,13 @@
 function greeting -d "Greet user"
   echo "Hello, $USER"
 
+  echo ""
   echo -s (set_color blue) "╔══════════════════════════════╗"
   echo -s (set_color blue) "║      Welcome, <3 Brave.      ║"
   echo -s (set_color blue) "╚══════════════════════════════╝"
   echo -s (set_color cyan) "Today is "(date "+%A, %B %d %Y")" and it's "(date "+%H:%M")
   echo -s (set_color yellow) "Are we making money or having fun today?"
+  echo ""
 end
 
 if status is-interactive
