@@ -1,11 +1,14 @@
 function greeting -d "Greet user"
-  echo "Hello, $USER"
+  echo -s ""
+  echo -s (set_color FF2200) "╔══════════════════════════════╗"
+  echo -s (set_color white) "       Welcome, <3 $USER.      "
+  echo -s (set_color FF2200) "╚══════════════════════════════╝"
+  echo -s ""
+  echo -s (set_color white) ""(date "+%A, %B %d %Y")" and it's "(date "+%H:%M")
+  echo -s (set_color purple) "Are we making money or having fun today?"
+  echo -s (set_color white) ""
 
-  echo -s (set_color blue) "╔══════════════════════════════╗"
-  echo -s (set_color blue) "║      Welcome, <3 Brave.      ║"
-  echo -s (set_color blue) "╚══════════════════════════════╝"
-  echo -s (set_color cyan) "Today is "(date "+%A, %B %d %Y")" and it's "(date "+%H:%M")
-  echo -s (set_color yellow) "Are we making money or having fun today?"
+  # exec pfetch
 end
 
 if status is-interactive
@@ -55,15 +58,21 @@ alias cat="bat"
 
 zoxide init fish | source
 oh-my-posh init fish --config $HOME/.config/ohmyposh/zen.toml | source
-thefuck --alias | source 
+thefuck --alias | source
 
 # poetry completions fish > ~/.config/fish/completions/poetry.fish
 
 alias cd="z"
 alias q="exit"
 
+alias uvr="uv run main.py"
+
 if test -f $HOME/.env.fish
   source $HOME/.env.fish
 end
 
 
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
