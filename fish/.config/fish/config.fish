@@ -1,14 +1,27 @@
+# Proxy setting
+function proxy
+    set -x HTTPS_PROXY "http://127.0.0.1:10809"
+    set -x HTTP_PROXY "http://127.0.0.1:10809"
+    set -x ALL_PROXY "socks5://127.0.0.1:10808"
+    git config --global http.proxy "socks5://127.0.0.1:10808"
+    git config --global https.proxy "socks5://127.0.0.1:10808"
+    echo "Proxy on"
+end
+
+function noproxy
+    set -e HTTPS_PROXY
+    set -e HTTP_PROXY
+    set -e ALL_PROXY
+    git config --global --unset http.proxy
+    git config --global --unset https.proxy
+    echo "HTTP Proxy off"
+end
+
+
 function greeting -d "Greet user"
   echo -s ""
-  echo -s (set_color FF2200) "╔══════════════════════════════╗"
-  echo -s (set_color white) "       Welcome, <3 $USER.      "
-  echo -s (set_color FF2200) "╚══════════════════════════════╝"
+  fastfetch
   echo -s ""
-  echo -s (set_color white) ""(date "+%A, %B %d %Y")" and it's "(date "+%H:%M")
-  echo -s (set_color purple) "Are we making money or having fun today?"
-  echo -s (set_color white) ""
-
-  # exec pfetch
 end
 
 if status is-interactive
@@ -41,8 +54,9 @@ alias vi="nvim"
 alias vim="nvim"
 alias vimdiff="nvim -d"
 
-alias ls="eza --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
-alias l="eza --color=always --long --git --no-user --all"
+alias ls="eza --color=always --icons=always --git --no-filesize  --no-time --no-user --no-permissions"
+alias l="eza --color=always --icons=auto --git --long --no-user --no-filesize --no-permissions --no-time --all"
+alias ll="eza --color=always --long --git --no-user --all"
 
 alias lg="lazygit"
 
@@ -76,3 +90,7 @@ end
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

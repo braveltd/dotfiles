@@ -4,7 +4,7 @@ final_space = true
 
 [secondary_prompt]
 template = '❯❯ '
-foreground = 'magenta'
+foreground = '#cc5800'
 background = 'transparent'
 
 [transient_prompt]
@@ -12,7 +12,7 @@ template = '❯ '
 background = 'transparent'
 foreground_templates = [
   '{{if gt .Code 0}}red{{end}}',
-  '{{if eq .Code 0}}magenta{{end}}',
+  '{{if eq .Code 0}}#cc5800{{end}}',
 ]
 
 [[blocks]]
@@ -22,7 +22,7 @@ newline = true
 
 [[blocks.segments]]
 template = '{{ .Path }}'
-foreground = 'blue'
+foreground = '#cc5800'
 background = 'transparent'
 type = 'path'
 style = 'plain'
@@ -31,16 +31,12 @@ style = 'plain'
 style = 'full'
 
 [[blocks.segments]]
-template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <#cc5800>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
 foreground = 'p:grey'
 background = 'transparent'
 type = 'git'
 style = 'plain'
 
-[blocks.segments.properties]
-branch_icon = ''
-commit_icon = '@'
-fetch_status = true
 
 [[blocks]]
 type = 'rprompt'
@@ -52,9 +48,6 @@ foreground = 'yellow'
 background = 'transparent'
 type = 'executiontime'
 style = 'plain'
-
-[blocks.segments.properties]
-threshold = 3000
 
 [[blocks]]
 type = 'prompt'
@@ -68,5 +61,11 @@ type = 'text'
 style = 'plain'
 foreground_templates = [
   '{{if gt .Code 0}}red{{end}}',
-  '{{if eq .Code 0}}magenta{{end}}',
+  '{{if eq .Code 0}}#cc5800{{end}}',
 ]
+
+[blocks.segments.properties]
+threshold = 3000
+branch_icon = ''
+commit_icon = '@'
+fetch_status = true
