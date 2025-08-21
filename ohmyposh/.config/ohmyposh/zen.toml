@@ -15,6 +15,12 @@ foreground_templates = [
   '{{if eq .Code 0}}#cc5800{{end}}',
 ]
 
+[upgrade]
+source = 'cdn'
+interval = '168h'
+auto = false
+notice = false
+
 [[blocks]]
 type = 'prompt'
 alignment = 'left'
@@ -31,12 +37,17 @@ style = 'plain'
 style = 'full'
 
 [[blocks.segments]]
-template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <#cc5800>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <#cc5800> {{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
 foreground = 'p:grey'
 background = 'transparent'
 type = 'git'
 style = 'plain'
 
+[blocks.segments.properties]
+branch_icon = '󰘬 '
+commit_icon = '@'
+fetch_status = true
+threshold = 3000
 
 [[blocks]]
 type = 'rprompt'
@@ -55,17 +66,8 @@ alignment = 'left'
 newline = true
 
 [[blocks.segments]]
-template = ' ❯'
+template = "{{ if eq .Env.FISH__BIND_MODE \"default\" }}<red> ❯</>{{ else if eq .Env.FISH__BIND_MODE \"insert\" }}<green> ❯</>{{ else if eq .Env.FISH__BIND_MODE \"replace_one\" }}<green> ❯</>{{ else if eq .Env.FISH__BIND_MODE \"visual\"}}<brmagenta> ❯</>{{ else }}<red> ?</>{{ end }}"
+# template = ' ❯'
 background = 'transparent'
 type = 'text'
 style = 'plain'
-foreground_templates = [
-  '{{if gt .Code 0}}red{{end}}',
-  '{{if eq .Code 0}}#cc5800{{end}}',
-]
-
-[blocks.segments.properties]
-threshold = 3000
-branch_icon = ''
-commit_icon = '@'
-fetch_status = true
